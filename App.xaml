@@ -8,6 +8,7 @@
         <SolidColorBrush x:Key="LightText" Color="#FFEEEEEE"/>
         <SolidColorBrush x:Key="DarkBackground" Color="#FF1B1C1E"/>
         <SolidColorBrush x:Key="DarkTextBox" Color="#FF303030"/>
+        <SolidColorBrush x:Key="TextErrorColor" Color="#FFDE3838"/>
 
     </Application.Resources>
 </Application>

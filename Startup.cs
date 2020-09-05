@@ -90,6 +90,7 @@ namespace Learning_Center
             }
 
             //after all operation write to a file status
+            //so next launch this thread 
             isfolderok = true;
             m.FileWrite(folders_state, Convert.ToString(isfolderok));
         }

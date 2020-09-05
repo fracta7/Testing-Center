@@ -35,7 +35,6 @@ namespace Learning_Center
         bool isRemembered = false;
         bool isTeacher = false;
         bool isStudent = false;
-        bool isFolderOK;
         string last_session_path = AppDomain.CurrentDomain.BaseDirectory + @"db\last";
         string remembered_path = AppDomain.CurrentDomain.BaseDirectory + @"db\last_0";
         string student_id_path = AppDomain.CurrentDomain.BaseDirectory + @"db\students\id";
@@ -59,15 +58,13 @@ namespace Learning_Center
             //if it is first time launch then create all necessary directories
             if (!File.Exists(folders_state))
             {
-                m.FileWrite(folders_state, Convert.ToString(isFolderOK));
-
-            }
-            else if (Convert.ToBoolean(File.ReadAllText(folders_state)) == false)
-            {
                 Startup startup1 = new Startup();
                 Thread startup = new Thread(new ThreadStart(startup1.StartCheckup));
                 startup.Start();
+                Thread.Sleep(100);
             }
+            
+            
 
 
             //check if student id is written to a file
@@ -272,6 +269,13 @@ namespace Learning_Center
                 {
                     m.FileWrite(login_is_teacher, "student");
                 }
+            }
+
+            if (account_type == "student"&hasError==false)
+            {
+                SubjectsStudent subjectsStudent = new SubjectsStudent();
+                subjectsStudent.Show();
+                Close();
             }
         }
 

@@ -31,7 +31,7 @@
 
                     <TextBlock Text="Already have an account? Sign In!" Foreground="{DynamicResource LightText}" Margin="0 5"/>
 
-                    <TextBlock x:Name="TextStatusSignIn" Foreground="{DynamicResource LightText}"/>
+                    <TextBlock x:Name="TextStatusSignIn" Foreground="{DynamicResource TextErrorColor}"/>
 
                     <TextBlock Text="Username" FontStyle="Italic" Foreground="{DynamicResource LightText}"/>
                     <TextBox x:Name="TextboxUsernameSignin" Margin="0 0 0 5" Padding="4" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
