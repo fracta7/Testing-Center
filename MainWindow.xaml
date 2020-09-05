@@ -1,0 +1,53 @@
+﻿<Window x:Class="Learning_Center.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Learning_Center"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Title="MainWindow" Height="450" Width="600" WindowStyle="None" Background="Transparent" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="5" Background="{DynamicResource DarkBackground}" BorderBrush="Black" BorderThickness="1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1" MouseLeftButtonDown="DragSignPage">
+                <TextBlock Text="Testing Center" FontSize="18" Margin="0 10 0 5" Foreground="{DynamicResource LightText}"/>
+            </StackPanel>
+            <Ellipse Grid.Column="2" Grid.Row="0" Width="15" Height="15" Fill="Red" MouseLeftButtonUp="SignPageCloseButton" Margin="0 0 0 5"/>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="Welcome to Testing Center!" Foreground="{DynamicResource LightText}" FontSize="18" HorizontalAlignment="Center" Margin="0 5"/>
+
+
+                <StackPanel HorizontalAlignment="Center">
+
+                    <TextBlock Text="Already have an account? Sign In!" Foreground="{DynamicResource LightText}" Margin="0 5"/>
+
+                    <TextBlock x:Name="TextStatusSignIn" Foreground="{DynamicResource LightText}"/>
+
+                    <TextBlock Text="Username" FontStyle="Italic" Foreground="{DynamicResource LightText}"/>
+                    <TextBox x:Name="TextboxUsernameSignin" Margin="0 0 0 5" Padding="4" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                    <TextBlock Text="Password" FontStyle="Italic" Foreground="{DynamicResource LightText}"/>
+                    <TextBox x:Name="TextboxPasswordSignin" Margin="0 0 0 5" Padding="4" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                    <CheckBox Content="Remember me" Margin="0 5" x:Name="CheckboxRememberMeSignin" FontStyle="Italic" Foreground="{DynamicResource LightText}" Background="{DynamicResource DarkTextBox}" IsChecked="False"/>
+                    <Button x:Name="ButtonSignIn" Content="Sign In" Padding="4" Click="ButtonSignIn_Click" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                    <Button Padding="4" Margin="0 5" Content="Reset Password" x:Name="ButtonResetSignIn" Click="ButtonResetSignIn_Click" Background="{DynamicResource DarkBackground}" Foreground="{DynamicResource LightText}" BorderBrush="{DynamicResource DarkBackground}"/>
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Are You New To Platform? Sign Up!" FontSize="17" Foreground="{DynamicResource LightText}"/>
+                    <Button x:Name="ButtonSignUp" Click="ButtonSignUp_Click" Content="Sign up as a Student" Margin="0 5" Padding="4" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                    <Button x:Name="ButtonTeacherSignUp" Click="ButtonTeacherSignUp_Click" Content="Sign up as a Teacher" Margin="0 5" Padding="4" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>

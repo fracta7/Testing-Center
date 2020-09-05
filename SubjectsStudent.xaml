@@ -1,0 +1,55 @@
+﻿<Window x:Class="Learning_Center.SubjectsStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Learning_Center"
+        mc:Ignorable="d"
+        AllowsTransparency="True"
+        Title="SubjectsStudent" Height="500" Width="600" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="5" BorderThickness="1" BorderBrush="Black" Background="{DynamicResource DarkBackground}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1" MouseLeftButtonDown="DragSelectSubjectStudentWindow">
+                <TextBlock Text="Select Subject" FontSize="18" Foreground="{DynamicResource LightText}" Margin="0 5"/>
+            </StackPanel>
+            <Ellipse Grid.Column="2" Grid.Row="0" Height="15" Width="15" Fill="Red" Margin="0 0 5 0" MouseLeftButtonUp="ButtonCloseSelectSubjectStudent"/>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Ellipse x:Name="EllipseStudentAvatar" Stroke="Black">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="DefaultAvatar.png"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <StackPanel Grid.Column="1">
+                        <TextBlock Text="Student Name" Foreground="{DynamicResource LightText}" HorizontalAlignment="Center" FontSize="18"/>
+                        <Button Grid.Column="1" Margin="5 5 5 5" Padding="5" Content="Open My Profile" x:Name="ButtonOpenProfileSelectSubjectStudent" Click="ButtonOpenProfileSelectSubjectStudent_Click" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                        <Button x:Name="ButtonStats" Click="ButtonStats_Click" Content="Show Top 5 Students" Padding="5" Margin="5 5 5 15" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                    </StackPanel>
+                    
+                </Grid>
+                <Button Content="Math" x:Name="ButtonMath" Click="ButtonMath_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="History" x:Name="ButtonHistory" Click="ButtonHistory_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="English" x:Name="ButtonEnglish" Click="ButtonEnglish_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="Chemistry" x:Name="ButtonChemistry" Click="ButtonChemistry_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="Physics" x:Name="ButtonPhysics" Click="ButtonPhysics_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="Biology" x:Name="ButtonBiology" Click="ButtonBiology_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="Informatics" x:Name="ButtonInformatics" Click="ButtonInformatics_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+                <Button Content="Literature" x:Name="ButtonLiterature" Click="ButtonLiterature_Click" Margin="0 5" Padding="5" Background="{DynamicResource DarkTextBox}" Foreground="{DynamicResource LightText}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
