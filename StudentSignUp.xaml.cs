@@ -132,7 +132,13 @@ namespace Learning_Center
                 status = "Enter valid email address";
                 TextStatus.Text = status;
             }
-            if (user_id_t == -1 & user_id_s == -1 & email_s == -1 & email_t == -1 & temppassword == temppassword1 & m.IsValidEmail(tempemail))
+            if (temppassword.Length < 8)
+            {
+                noError = false;
+                status = "Password should be longer or equal to 8 symbol";
+                TextStatus.Text = status;
+            }
+            if (user_id_t == -1 & user_id_s == -1 & email_s == -1 & email_t == -1 & temppassword == temppassword1 & m.IsValidEmail(tempemail)& temppassword.Length >= 8)
             {
                 noError = true;
 
