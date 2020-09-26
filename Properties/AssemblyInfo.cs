@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Learning Center")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Testing Center")]
+[assembly: AssemblyDescription("Test creating and solving platform")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Learning Center")]
+[assembly: AssemblyCompany("fracta7")]
+[assembly: AssemblyProduct("Testing Center")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

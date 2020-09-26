@@ -297,7 +297,7 @@ namespace Learning_Center
         {
             TeacherSignUp teacherSignUp = new TeacherSignUp();
             teacherSignUp.Show();
-            Close();
+            this.Close();
         }
     }
 }
